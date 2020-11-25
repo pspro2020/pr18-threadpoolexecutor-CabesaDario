@@ -20,7 +20,7 @@ public class Power implements Runnable{
             for (int i=1; i<=10; i++) {
 
                 System.out.printf("%s -> %d ^ %d = %.0f%nCalculado en hilo %s\n",dateTimeFormatter.format(LocalDateTime.now()),number,i,(Math.pow(number, i)), Thread.currentThread().getName());
-                TimeUnit.MILLISECONDS.sleep(2);
+                TimeUnit.MILLISECONDS.sleep(200);
             }
 
         }catch (InterruptedException e){

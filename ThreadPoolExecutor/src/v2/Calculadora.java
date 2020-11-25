@@ -5,7 +5,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 public class Calculadora {
     ThreadPoolExecutor fixedThreadPool =
-            (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
+            (ThreadPoolExecutor) Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 
     void execute(Power power) {
         try {

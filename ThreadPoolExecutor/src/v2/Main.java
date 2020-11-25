@@ -11,11 +11,14 @@ public class Main {
 
         }
         try {
-            Thread.sleep(300);
+            while (calc.fixedThreadPool.getActiveCount()>0)
+            Thread.sleep(2000); //espera activa, no sé como hacerlo mejor porque depende del equipo
         } catch (InterruptedException e) {
             return;
         }
 
         System.out.println("Maximo de hilos usados: "+calc.fixedThreadPool.getPoolSize());
+
+        calc.fixedThreadPool.shutdown();
     }
 }
